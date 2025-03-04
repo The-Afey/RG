@@ -1,0 +1,2 @@
+https://www.bestprog.net/ru/2020/05/08/python-module-struct-packing-unpacking-data-basic-methods-ru/
+https://www.bestprog.net/ru/2020/05/03/python-module-struct-working-with-binary-files-ru/
