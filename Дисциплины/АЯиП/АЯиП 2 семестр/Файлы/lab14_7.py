@@ -14,8 +14,7 @@ def check(text):
     return len(brackets) == 0
 
 
-text = input("Введите текст для проверки: ")
-if check(text):
+if check(input("Введите текст для проверки: ")):
     print("Скобки расставлены правильно.")
 else:
     print("Скобки расставлены неправильно.")
