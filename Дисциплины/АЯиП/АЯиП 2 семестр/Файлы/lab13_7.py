@@ -3,9 +3,9 @@ from random import randint
 
 def create_matrix(dimension):
     matrix = []
-    for i in range(dimension):
+    for _ in range(dimension):
         row = []
-        for j in range(dimension):
+        for _ in range(dimension):
             row.append(randint(-100, 100))
         matrix.append(row)
     return matrix
