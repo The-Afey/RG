@@ -1,16 +1,6 @@
 from random import randint
 
 
-def find_max(list):
-    max_el = list[0]
-    el_index = 0
-    for i in range(len(list)):
-        if list[i] > max_el:
-            max_el = list[i]
-            el_index = i
-    return max_el, el_index
-
-
 def create_matrix(dimension):
     matrix = []
     for i in range(dimension):
@@ -26,6 +16,16 @@ def show_matrix(dimension, matrix):
         for j in range(dimension):
             print(matrix[i][j], end='\t')
         print()
+
+
+def find_max(list):
+    max_el = list[0]
+    el_index = 0
+    for i in range(len(list)):
+        if list[i] > max_el:
+            max_el = list[i]
+            el_index = i
+    return max_el, el_index
 
 
 dimension = 2
