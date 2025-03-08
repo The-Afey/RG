@@ -14,7 +14,7 @@ def create_matrix(dimension):
 def show_matrix(dimension, matrix):
     for i in range(dimension):
         for j in range(dimension):
-            print(matrix[i][j], end='\t')
+            print(matrix[i][j], end='\t', sep='')
         print()
 
 
