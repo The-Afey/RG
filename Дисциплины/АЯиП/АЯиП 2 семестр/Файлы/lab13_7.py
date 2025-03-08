@@ -1,3 +1,6 @@
+from random import randint
+
+
 def find_max(list):
     max_el = list[0]
     el_index = 0
@@ -8,27 +11,39 @@ def find_max(list):
     return max_el, el_index
 
 
-matrix = []
-for i in range(2):
-    row = []
-    for j in range(2):
-        row.append(int(input('Введите элементы двумерной матрицы: ')))
-    matrix.append(row)
+def create_matrix(dimension):
+    matrix = []
+    for i in range(dimension):
+        row = []
+        for j in range(dimension):
+            row.append(randint(-100, 100))
+        matrix.append(row)
+    return matrix
 
-print('Введённая матрицца:')
-for i in range(len(matrix)):
-    for j in range(len(matrix[i])):
-        print(matrix[i][j], end='\t', sep='')
-    print()
+
+def show_matrix(dimension, matrix):
+    for i in range(dimension):
+        for j in range(dimension):
+            print(matrix[i][j], end='\t')
+        print()
+
+
+dimension = 2
+
+
+matrix = create_matrix(dimension)
+print('Исходная матрица')
+show_matrix(dimension, matrix)
+
 
 real_max = 0
 string = 0
-for j in range(2):
+for j in range(len(matrix)):
     mx_matrix, index_matrix = find_max(matrix[j])
     if real_max < mx_matrix:
         real_max = mx_matrix
         string = j
     print(
-        f'В строке матрицы {j+1} максимальный элемент равен {mx_matrix}, его номером {index_matrix+1}')
+        f'В строке матрицы {j+1} максимальный элемент равен {mx_matrix}, его номер {index_matrix+1}')
 print(
     f'Максимальный элемент матрицы расположен в строке номер {string+1} и равен {real_max}')
